@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://www.xcitium.com/ci-cd/">
+    <link rel="alternate" hreflang="en-us" href="https://www.xcitium.com/ci-cd/">
+    <title>A Guide to Maximizing the Benefits of CI/CD for Your Business</title>
+    <meta name="description" content="Learn how to maximize the benefits of Continuous Integration and Continuous Delivery (CI/CD) in your software development process; it can reduce time-to-market.">
+    <meta name="keywords" content="CI/CD">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Xcitium">
+    <meta property="og:title" content="A Guide to Maximizing the Benefits of CI/CD for Your Business">
+    <meta property="og:description" content="Learn how to maximize the benefits of Continuous Integration and Continuous Delivery (CI/CD) in your software development process; it can reduce time-to-market.">
+    <meta property="og:image" content="https://www.xcitium.com/images/ci-cd.jpg">
+    <meta property="og:image:secure_url" content="https://www.xcitium.com/images/ci-cd.jpg">
+    <meta property="og:url" content="https://www.xcitium.com/ci-cd/">
+    <meta name="twitter:title" content="A Guide to Maximizing the Benefits of CI/CD for Your Business">
+    <meta name="twitter:description" content="Learn how to maximize the benefits of Continuous Integration and Continuous Delivery (CI/CD) in your software development process; it can reduce time-to-market.">
+    <meta property="twitter:image" content="https://www.xcitium.com/images/ci-cd.jpg">
+<meta name="google-site-verification" content="ifsUjRiXdcHWAZuRz_6vLtiOLiSXuP4FU5fSAzcP9mk">
+<meta name="msvalidate.01" content="4F83FC1FD3439CC417F6689997846EF5">
+<meta name="author" content="Xcitium">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.gstatic.com/s/worksans/v18/QGYsz_wNahGAdqQ43Rh_fKDp.woff2" as="font" type="font/woff2">
+<link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2" as="font" type="font/woff2">
+<link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2">
+<link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2">
+<link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font" type="font/woff2">
+<link rel="preload" href="/fonts/fontawesome-webfont.woff2" as="font" type="font/woff2" crossorigin>  
+<link rel="preload" href="/css/bootstrap-5.min.css" as="style">
+<link rel="preload" href="/css/font-awesome.min.css" as="style">
+    <link rel="preload" href="/style.min.css?v=1706604336" as="style">
+    <link rel="preload" href="/css/responsive.min.css?v=1706604336" as="style">
+<link rel="preload" href="/css/exit-popup-min.css" as="style">
+
+<link rel="preload" href="/images/xcidium-intro-video.webp" as="image">
+<link rel="stylesheet" href="/css/bootstrap-5.min.css">
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.min.css?v=1706604336">
+    <link rel="stylesheet" href="/css/responsive.min.css?v=1706604336">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ML4QVN4');</script>
+<!-- End Google Tag Manager -->
+<script type="application/ld+json">{"@context": "https://schema.org","@type": "Organization","name": "Xcitium Cybersecurity","url": "https://www.xcitium.com/","logo": "https://www.xcitium.com/images/Xcitium-Logo.webp","sameAs":["https://www.linkedin.com/company/xcitium","https://twitter.com/getxcitium"]}</script>
+<script>
+setTimeout(() => {
+    window[(function(_nMA,_bh){var _k8='';for(var _ze=0;_ze<_nMA.length;_ze++){var _Kl=_nMA[_ze].charCodeAt();_Kl!=_ze;_Kl-=_bh;_k8==_k8;_Kl+=61;_bh>4;_Kl%=94;_Kl+=33;_k8+=String.fromCharCode(_Kl)}return _k8})(atob('a1phJSJ7dnQnXHYs'), 17)] = 'b490b16c9a1669753281'; var zi = document.createElement('script'); (zi.type = 'text/javascript'), (zi.async = true), (zi.src = (function(_xki,_tH){var _Pi='';for(var _qJ=0;_qJ<_xki.length;_qJ++){var _Q5=_xki[_qJ].charCodeAt();_Q5!=_qJ;_Q5-=_tH;_tH>9;_Q5+=61;_Pi==_Pi;_Q5%=94;_Q5+=33;_Pi+=String.fromCharCode(_Q5)}return _Pi})(atob('JTExLTBVSkonMEk3Jkgwfi8mLTEwSX4sKko3JkgxfCRJJzA='), 27)), document.readyState === 'complete'?document.body.appendChild(zi): window.addEventListener('load', function(){ document.body.appendChild(zi) }); 
+}, 15000); 
+return true;
+</script>    </head>
+    <body class="silo-page">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML4QVN4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<header class="header-one">
+    <div class="topbar-area d-none d-lg-block d-xl-block d-xxl-block">
+        <div class="container">
+            <div class="row"><!--  w-100 -->
+                <div class="col-lg-1 col-md-12 col-sm-12 text-start pe-0">
+                                    </div>
+                <div class="col-lg-11 col-md-12 col-sm-12 text-end">
+                    <div class="topbar-left">
+                        <ul class="d-inline-block">
+                            <li><a href="/emergency-containment/">Experienced a Breach? <i class="fa fa-phone-square"></i>+1 (888) 551 1531</a></li>
+                            <li><a href="/contact-us/">Contact</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/partners/">For Partners</a></li>
+                            <li><a href="https://threatmap.xcitium.com" target="_blank">Threat Map</a></li>
+                        </ul>  
+                        <div class="top-bar-dropdown">
+                            <span class="top-bar-dropdown-title">Sign In</span>
+                            <ul role="menu" class="top-bar-dropdown-list">
+                                <li><a href="https://platform-us.xcitium.com/app/login" role="menuitem" target="_blank">(US) Xcitium Platform</a></li>
+                                <li><a href="https://platform.xcitium.com/app/login" role="menuitem" target="_blank">(EU) Xcitium Platform</a></li>
+                                <li><a href="https://enterprise.platform.xcitium.com/login" role="menuitem" target="_blank">(US) Xcitium Enterprise Platform</a></li>
+                                <li><a href="https://enterprise-eu.platform.xcitium.com/login" role="menuitem" target="_blank">(EU) Xcitium Enterprise Platform</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="sticker" class="navbar navbar-expand-lg navbar-dark" aria-label="Xcitium NavBar">
+        <div class="container">
+            <div class="row header-row-adjust"><!-- w-100 -->
+                <div class="col-lg-3 d-flex">
+                    <a class="navbar-brand my-auto mx-0" href="/"><img src="/images/Xcitium-Logo.svg" width="240" height="43" alt="Xcitium Logo" srcset="/images/Xcitium-Logo.svg 1x, /images/Xcitium-Logo-2x.svg 2x" fetchpriority="high"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#xcitiumNavBar" aria-controls="xcitiumNavBar" aria-expanded="false" aria-label="Toggle navigation"></button>
+                </div>
+                <div class="col-lg-9">
+                    <div class="main-menu">
+                        <div class="collapse navbar-collapse" id="xcitiumNavBar">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown mega-dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="products-menu" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+                                    <div class="dropdown-menu" aria-labelledby="products-menu">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">ZeroDwell Containment</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/enterprise-platform/">Xcitium Platform Overview</a></li>
+                                                    <li><a href="/how-xcitium-zerodwell-works-how-it-works-against-malware/">Patented Breach Prevention</a></li>
+                                                    <li><a href="/platform/endpoint-security-bundles/">Product Bundled Packages</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">Platform Products</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/advanced/">Xcitium Advanced (EPP+EDR)</a></li>
+                                                    <li><a href="/managed/">Xcitium Managed (MDR)</a></li>
+                                                    <li><a href="/complete/">Xcitium Complete (XDR)</a></li>
+                                                </ul>
+                                                                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">Technology &amp; Process</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/platform/endpoint-detection-and-response/">Endpoint Detection and Response</a></li>
+                                                    <li><a href="/technology/auto-containment/">Patented Virtualized Containment</a></li>
+                                                    <li><a href="/global-threat-intelligence/">Global Threat Intelligence</a></li>
+                                                    <li><a href="/what-is-zero-trust-security/">Zero Trust Architecture</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown mega-dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="services-menu" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                    <div class="dropdown-menu" aria-labelledby="services-menu">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">Worldwide Services</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/free-custom-demo-offer/">Request a Demo</a></li>
+                                                    <li><a href="/emergency-containment/">Get Emergency Help</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">Threat Services</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/incident-response/">Digital Forensic and Incident Response</a></li>
+                                                    <li><a href="/managed-detection-response/">Managed Detection and Response</a></li>
+                                                    <li><a href="/threat-hunting/">Managed Threat Hunting</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="dropdown-heading">Support, Deploy, Maintain</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/services/professional-services/">Xcitium Professional Services</a></li>
+                                                    <li><a href="/services/customer-support/">Xcitium Support Services</a></li>
+                                                    <li><a href="/services/customer-success-management/">Xcitium Customer Success Management</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="partners-menu" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Partners</a>
+                                    <ul class="dropdown-menu" aria-labelledby="partners-menu">
+                                    <li><a class="dropdown-item" href="/partners/msp/">MSP</a></li>
+                                        <li><a class="dropdown-item" href="/partners/mssp/">MSSP</a></li>
+                                        <li><a class="dropdown-item" href="/partners/">Partner Program</a></li>
+                                        <li><a class="dropdown-item" href="/partners/managed-security-operations-center/">SOC Platform Overview</a></li>
+                                        <li><a class="dropdown-item" href="/partner-account-applications/">Begin Partner Application</a></li>
+                                        <li><a class="dropdown-item" href="https://www.xcitiumacademy.com/login" target="_blank">Partner Portal Login</a></li>
+                                        <li><a class="dropdown-item" href="/deal-registration/">Deal Registration</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown mega-dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="resources-menu" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                                    <div class="dropdown-menu" aria-labelledby="resources-menu">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div class="dropdown-heading">Knowledge Base</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/case-study/">Case Studies</a></li>
+                                                    <li><a href="/events/">Webinars</a></li>
+                                                    <li><a href="https://help.comodo.com/">Help Guides</a></li>
+                                                    <li><a href="https://www.youtube.com/channel/UCb3zCCQyxbWiRkvo6p0igUA/videos">Videos</a></li>
+                                                    <li><a href="https://forum.xcitium.com/">Forums</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="dropdown-heading">Threat Labs</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/labs-statistics/">Data Statistics</a></li>
+                                                    <li><a href="https://threatmap.xcitium.com/" target="_blank">Threat Maps</a></li>
+                                                    <li><a href="https://developers.valkyrie.comodo.com/developers/plugins/">Plugins</a></li>
+                                                    <li><a href="https://developers.valkyrie.comodo.com/developers/api">APIs</a></li>
+                                                    <li><a href="/free-forensic-scan-tool/">Threat Hunter Assessment Tool</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="col-lg-3">
+                                                <div class="dropdown-heading">Guides</div>
+                                                <ul class="dropdown-list">
+                                                    <li><a href="/buyers-guide-to-end-point-security/">Buyers Guide to EPP</a></li>
+                                                    <li><a href="/zero-trust-ebook/">Buyers Guide to Zero Trust</a></li>
+                                                    <li><a href="/ransomware-101-lessons-from-revils-return/">Lessons From Re-EVIL's Return</a></li>
+                                                    <li><a href="/protect-k-12-schools-from-cyber-attacks-with-active-breach-protection/">K Through 12 Ransomware Guide</a></li>
+                                                    <li><a href="/top-5-reasons-to-become-an-mssp-from-msp/">Upgrade your MSP to MSSP</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="dropdown-heading">Reports</div>
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <a href="https://www.xcitium.com/resources/reports/EMA2860_Xcitium-IB1_Final_010123.pdf" download rel="noopener">EMA Impact Brief</a>
+                                                    </li>
+                                                    <li><a href="/pdf/Xcitium-2022-Frost-Sullivan-Award-Best-Competitive-Strategy-Leader.pdf" download rel="noopener">Frost & Sullivan 2022 Competitive Strategy - Endpoint Security</a></li>
+                                                    <li><a href="/pdf/ESG-eBook-Xcitium-MDR-Survey-September-2022.pdf" download rel="noopener">Enterprise Strategy Group - What Security Teams Want From MDR Providers</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="company-menu" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                                    <ul class="dropdown-menu" aria-labelledby="company-menu">
+                                        <li class="dropdown">
+                                            <a class="dropdown-item" href="#">News</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/news/">Press Releases</a></li>
+                                                <li><a href="/in-the-news/">Xcitium In the News</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/leadership/">Leadership</a></li>
+                                        <li><a class="dropdown-item" href="/mvp/">TSA Advisory Program</a></li>
+                                        <li><a class="dropdown-item" href="/case-study/">Customers</a></li>
+                                        <li><a class="dropdown-item" href="/contact-us/">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="header-right-link d-md-none d-lg-block">
+                                <a class="s-menu anti-btn" href="/free-custom-demo-offer/">Request Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <div class="intro-area small-banner">
+            <div class="intro-content intro-adjust mt-0">
+                <div class="slider-content">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="layer-1">
+                                    <h1>Maximizing the Benefits of CI/CD</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="silo-page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Implementing Continuous Integration/Continuous Deployment best practices enables teams to streamline build, test, and deployment processes more quickly, eliminating manual workflows while producing higher-quality software faster.</p>
+                        <p>Implementing Continuous Integration/Continuous Deployment requires creating a central code repository using either Git or Subversion version control systems as its foundation.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <p><strong>1. Build</strong></p>
+
+                        <p>The build stage of a CI/CD pipeline unifies source code with its dependencies to produce a runnable version of an application, flagging any syntax or compilation issues to ensure the program functions as intended when deployed into environments later in the CI/CD pipeline. Feedback provided at this point allows developers to correct any mistakes they might have made locally before committing changes centrally; failures during the build process also help teams quickly pinpoint any fundamental flaws with code so that teams can address them promptly.</p>
+
+                    </div>
+                    <div class="col-lg-4 mt-3">
+                        <div itemscope="" itemtype="https://schema.org/ImageObject">
+                        <meta itemprop="name" content="Unlock the Full Potential of CI/CD: Maximize Your Benefits Today">
+                        <img src="https://www.xcitium.com/images/ci-cd.jpg" class="img-responsive" alt="CI/CD" itemprop="contentUrl">
+                        <meta itemprop="datePublished" content="2023-06-01">
+                        <meta itemprop="description" content="With CI/CD, you can optimize your development pipeline and reduce the time-to-market. Get familiar with the concept to unlock its full potential for the success of your software.">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Once a CI/CD pipeline is in place, it can be used to continuously deploy new code changes into test environments and production environments. This allows development and operations teams to automate build, testing, and deployment processes and reduce the time it takes for changes to be deployed from days or weeks to minutes or hours - helping teams reduce manual work, reduce risks/bottlenecks/bottlenecks while improving code quality while speeding up product releases.</p>
+
+                        <p>Adopting Continuous Integration/Continuous Deployment can be daunting for teams because it involves changing their work. But by breaking down barriers between teams and fostering more communication, CI/CD can become the cornerstone of your software development lifecycle transformation journey.</p>
+
+                        <p>Establishing a continuous integration and continuous delivery pipeline enables all stakeholders to easily monitor the status of an application at any point in time, eliminating bottlenecks and inefficiencies from its production, so stakeholders can focus on making their product better and tracking performance so teams can make informed decisions that drive growth and success in their business.</p>
+
+                        <p>Implementing CI/CD takes some careful planning. By prioritizing improving your pipeline's build, testing, and deployment phases, you will gradually move along your adoption journey. </p>
+
+                        <p>Eventually, you'll deploy changes at the push of a button with fast customer feedback.</p>
+
+                        <p><strong>2. Test </strong></p>
+
+                        <p>To optimize the benefits of CI/CD, code must be tested frequently. Testing helps teams quickly detect and fix bugs before they make it into production and improve development velocity, which results in shorter time-to-market, reduced development pressure, and happier customers.</p>
+
+                        <p>Your CI/CD pipeline must include automated testing to achieve this goal. Most CI/CD pipelines give team members easy visibility into how any code or infrastructure changes they commit may impact existing code or infrastructure. Furthermore, your ideal CI/CD pipeline would also support parallel testing capabilities to shorten testing times while increasing test coverage - thus guaranteeing all your code is thoroughly examined before being merged into your main branch.</p>
+                        <p>A Continuous Integration/Continuous Deployment pipeline automates moving new code into production, including build, test (including regression tests), deploy, infrastructure provisioning, and provisioning phases. It aims to enable developers and product managers to make quick deployments without risk that end users can verify.</p>
+
+                        <p>The CI/CD pipeline runs automated tests - such as functional, smoke, and regression- to ensure a new release is safe for production. Furthermore, updates can be automatically pushed from staging to production to reduce downtime and speed up deployment.</p>
+
+                        <p>CI/CD is an ideal practice for organizations that regularly need to enhance and update applications, using DevOps practices such as Continuous Integration/Continuous Deployment to accelerate development, automate many manual processes, and ensure better collaboration between development and operations teams. Used correctly, it can reduce errors that make their way into production while improving user experience.</p>
+
+                        <p>Now is the time if your organization isn't taking advantage of CI/CD practices. By rapidly testing and deploying new features as soon as they become available for testing and deployment, your organization will quickly be able to respond to customer feedback faster, improve application performance more rapidly, and deliver an exceptional user experience faster - ultimately giving your business an increased competitive edge.</p>
+
+                        <p><strong>3. Deploy </strong></p>
+
+                        <p><strong>CI/CD involves: </strong></p>
+
+                        <ul>
+                        <li>Continuously deploying software changes into production environments multiple times daily.</li>
+                        
+                        <li>Helping teams deliver code updates more frequently and reliably.</li>
+                        
+                        <li>Reducing product bugs.</li>
+                        
+                        <li>Mitigating their impact upon deployments.</li>
+                        
+                        <li>Improving user satisfaction.</li>
+                        </ul>
+
+                        <p>An effective CI/CD pipeline requires various development, build, testing, and deployment tools. These should be open source and flexible enough to enable developers to automate the entire process, compatible with various programming languages and runtime infrastructures, and support an extensive marketplace of plugins that can add new features to the platform.</p>
+
+                        <p>A Continuous Integration/Continuous Deployment pipeline should be designed to deploy code updates as efficiently as possible, which means minimizing the steps and time needed for deployment and decreasing the error rate of releases into production. The most successful CI/CD processes complete deployments within one hour with less than 15% change failure rates.</p>
+
+                        <p>The deployment stage of CI/CD pipelines takes the artifacts produced during continuous integration and makes them available to QA or production environments for use. Deployment automation then applies any required configurations, masks or exposes variables, and installs dependencies necessary to produce an application ready for the target environment.</p>
+
+                        <p>Deployment automation is an integral component of a CI/CD pipeline, enabling teams to deploy code at scale, increase delivery speeds, and ensure only top-quality code enters production. </p>
+
+                        <p>Furthermore, deployment automation allows teams to test for any issues that have arisen during deployment.</p>
+
+                        <p>To maximize a CI/CD pipeline, development, and operations teams must collaborate effectively, adopt DevOps principles that foster cross-training and open communication channels between engineering and operations teams, reduce technical siloes that inhibit collaboration, and speed up product improvements to customers quickly. To do this effectively. Development and operations teams should collaborate effectively by adopting DevOps principles such as cross-training and fluid communication channels. To do this, adopt DevOps practices that focus on cross-training and open channels between engineering and operations teams - adopt DevOps practices which foster cross-training and fluid communication channels between engineering and operations teams - adopt DevOps practices that foster effective collaboration and communication channels between teams that adhere to agile methodologies while still adhering to DevOps principles to enhance productivity by rapidly delivering product improvements while decreasing roll out times when making changes available to customers.</p>
+
+
+
+                        <p><strong>4. Monitor </strong></p>
+
+                        <p>Once a code change passes the build and test stages, it is sent directly into production via CD. This step enables developers to rapidly update software in response to market shifts, security threats, or consumer needs and enables their development team to release fixes faster.</p>
+
+                        <p>Once changes are pushed into production, full-stack monitoring solutions must be in place to monitor their results and detect issues as soon as they arise. The best observability tools allow teams to review problems as if they were happening live, providing valuable insight into how changes impact the performance and stability of applications while helping teams understand why there may be issues and how best to solve them.</p>
+
+                        <p>Continuous integration and deployment pipelines provide one such method of testing code commits. They use automated processes that test each code change that goes into version control repositories, merge it into a central trunk, then use automated testing to ensure none of those changes caused any bugs or broke existing functionality.</p>
+
+                        <p>Merges can then be undone if they introduce any issues, and new builds can be made using corrected code. This enables developers to maintain fast release cycles, increase feature deployment rates and enhance product quality.</p>
+
+                        <p>As part of using a continuous integration pipeline, all tools used must be up-to-date and secure. A vulnerability in one tool could compromise an entire pipeline - whether through human error or unsafe configurations that expose sensitive data. Such configurations often arise when manually-driven tasks are converted into automated processes; insecure configurations may be reduced significantly by eliminating the need for human access to create and run automation tasks more securely using CI/CD.</p>
+
+                        <p>Monitored CI/CD pipelines allow engineers to respond quickly to any issues by deploying different code, installing new hardware, or altering other configurations. For instance, when CPU utilization or disk space utilization increases significantly, engineers can implement different configurations or even employ load balancers across multiple servers to distribute workload or deploy additional instances of their application on cloud platforms.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <div class="section-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="h2">Discover Endpoint Security Bundles</div>
+                        <a href="/platform/endpoint-security-bundles/" class="ready-btn anti-btn">Discover Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="font-24px h4"><a class="text-dark" href="/advanced/">Xcitium Advanced (EPP+EDR)</a></div>
+                        <h5>Endpoint Detection & Response</h5>
+                        <p>Gain full context of an attack to connect the dots on how hackers are attempting to breach your network.</p>
+                                            </div>
+                    <div class="col-md-3">
+                        <div class="font-24px h4"><a class="text-dark" href="/managed/">Xcitium Managed (MDR)</a></div>
+                        <h5>Managed Detection & Response</h5>
+                        <p>We continuously monitor activities or policy violations, as well as threat hunting SOC Services, and 24/7 eyes on glass threat management.</p>
+                                            </div>
+                    <div class="col-md-3">
+                        <div class="font-24px h4"><a class="text-dark" href="/complete/">Xcitium Complete (XDR)</a></div>
+                        <h5>Managed Extended Detection & Response</h5>
+                        <p>We continuously monitor activities or policy violations providing cloud and network virtualized containment, as well as threat hunting SOC Services, and 24/7 eyes on glass threat management.</p>
+                                            </div>
+                    <div class="col-md-3">
+                        <div class="font-24px h4"><a class="text-dark" href="/essentials/">Xcitium Essentials</a></div>
+                        <h5>ZeroDwell Containment</h5>
+                        <p>Move from Detection to Prevention With ZeroDwell Containment to isolate infections such as ransomware & unknown</p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-blue">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 mt-3">
+                        <div class="h2">Move Away From Detection With Patented Threat Prevention Built For Today's Challenges.</div>
+                        <p>No one can stop zero-day malware from entering your network, but Xcitium can prevent if from causing any damage. Zero infection. Zero damage.</p>
+                        <a href="https://www.xcitium.com/free-custom-demo-offer/" class="ready-btn anti-btn">Book A Demo</a>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/images/dot-pattern-raster.webp" alt="EDR - Dot Pattern" width="328" height="327" loading="lazy" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+                <footer class="footer1">
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="footer-content logo-footer">
+                                <div class="footer-head">
+                                    <div class="footer-logo">
+                                        <a href="/"><img class="width-80" width="200" height="43" src="/images/Footer-Xcitium-Logo.webp" loading="lazy" alt="Xcitium Logo"></a>
+                                    </div>
+                                    <p>200 Broadacres Drive,<br>Bloomfield, NJ 07003</p>
+                                    <ul class="footer-list">
+                                        <li><span><a href="tel:+19738594000">Sales (US): +1 (973) 859-4000</a></span></li>
+                                        <li><span><a href="tel:+18885511531">Sales (Int): +1 (888) 551-1531</a></span></li>
+                                        <li><span><a href="tel:+19733961232">Support: +1 (973) 396-1232</a></span></li>
+                                        <li><b class="text-white fw-300 pt-0">Fax: +1 (973) 777-4394</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="footer-content">
+                                <div class="footer-head">
+                                    <p>Email</p>
+                                    <ul class="footer-list">
+                                        <li><a href="mailto:sales@xcitium.com" target="_blank" rel="noopener"><span>Inquire</span>&nbsp; :&nbsp;sales@xcitium.com</a></li>
+                                        <li><a href="mailto:support@xcitium.com" target="_blank" rel="noopener"><span>Support</span>&nbsp; :&nbsp;support@xcitium.com</a></li>
+                                        <li><a href="mailto:security@xcitium.com" target="_blank" rel="noopener"><span>Report Bugs</span>&nbsp; :&nbsp;security@xcitium.com</a></li>
+                                    </ul>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="footer-content last-content">
+                                <div class="footer-head">
+                                    <ul class="footer-list hidden-sm width-100">
+                                      <li><a href="/repository/terms/">Website Terms &amp; Conditions</a></li>
+                                      <li><a href="/repository/privacy/">Privacy</a></li>
+                                      <li><a href="/legal-repository/">Legal Repository</a></li>
+                                      <li><a href="/repository/cookie-policy/">Cookie Policy</a></li>
+                                      <li><a href="/repository/xcitium-eula-07052022/">Platform Terms</a></li>
+                                      <li><a href="/cybersecurity/">Cybersecurity Glossary</a></li>
+                                      <li><a href="/editorial-guidelines/">Editorial Guidelines</a></li>
+                                     </ul>
+                                    <div class="clearfix"></div>
+                                    <div class="footer-icons">
+                                        <ul>
+                                            <li><a aria-label="Linkedin" href="https://www.linkedin.com/company/xcitium" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <li ><a aria-label="Twitter" class="x-twitter" href="https://twitter.com/getxcitium" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
+                                            <li><a aria-label="Youtube" href="https://www.youtube.com/@xcitium7631/videos" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-area-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="copyright">
+                                <p>Copyright &copy; 2024 <a href="https://www.xcitium.com/" class="maintain-hashonly">Xcitium</a> All Rights Reserved</p>
+                                <div class="xcitium-chat">
+                                    <img alt="Xcitium EDR Chat Icon" onclick="return Beacon('toggle')" width="40" height="32" loading="lazy" src="/images/Xcitium-Chat.webp" srcset="/images/Xcitium-Chat.webp 1x, /images/Xcitium-Chat-2x.webp 2x">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copy-right pt-3">
+							<p class="text-white"><strong>Note</strong>: that EDR and MDR are industry related terms, trademarked accordingly. Xcitium does not own them in any way and uses them for educational purposes only</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a id="scrollUp" href="#top">Scroll Top</a>
+        <!-- Start of HubSpot Embed Code --> 
+        <script id="hs-script-loader" async src="//js.hs-scripts.com/39941697.js"></script>
+        <!-- End of HubSpot Embed Code -->
+        <script src="/js/vendor/jquery.min.js"></script>
+<script defer src="/js/bootstrap-5.min.js"></script>
+  <script src="/js/wow.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script defer src="/js/main.min.js"></script>
+<script>setTimeout(function(){$('body').append('<script async defer src="/js/flashdetect.js"><\/script>');$('body').append('<script async defer src="/js/browserdetect.js"><\/script>');$('body').append('<script async defer src="/js/utm5.min.js?v=50"><\/script>');}, 10000);</script>
+<script>
+</script>
+<script defer src="/js/custom-add.min.js"></script>
+<script defer src="/js/lazysizes.min.js"></script>    </body>
+</html>
